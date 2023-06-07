@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Numbers() {
+  let start = 1;
+  const end = 100;
+  const interval = setInterval(() => {
+    for (let i = start; i <= end; i++) {
+      if (i % 2 === 0) {
+        console.log(i);
+        if (i % 10 === 0) {
+          start = i + 1;
+          break;
+        }
+      }
+    }
+    if (start > end) {
+      clearInterval(interval);
+    }
+  }, 5000);
+}
+Numbers();
+
+    </script>
+</body>
+</html>
